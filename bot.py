@@ -1,9 +1,13 @@
 import nextcord
+import os
 from nextcord.ext import commands
 from chat import chatbot
+from dotenv import load_dotenv # type: ignore
+load_dotenv()
 
-# Configuration
-TESTING_GUILD_ID = 1326191744022482954  # Replace with your guild ID
+# Get the bot token from the environment or replace with a hardcoded token
+TESTING_GUILD_ID = os.getenv("TESTING_GUILD_ID")
+
 
 # Bot initialization
 intents = nextcord.Intents.default()
@@ -18,6 +22,11 @@ async def on_ready():
 @bot.slash_command(description="My first slash command", guild_ids=[TESTING_GUILD_ID])
 async def hello(interaction: nextcord.Interaction):
     await interaction.send("Hello!")
+
+@bot.slash_command(description="Chat with the bot", guild_ids=[TESTING_GUILD_ID])
+async def chat(interaction: nextcord.Interaction, message: str):
+    response = chatbot(message)
+    await interaction.send(response)
 
 @bot.event
 async def on_message(message):

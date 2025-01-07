@@ -1,3 +1,4 @@
 nextcord
 ollama
 python-dotenv
+requests

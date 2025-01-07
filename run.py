@@ -2,8 +2,8 @@ import os
 from bot import bot
 
 # Load environment variables (optional, if using .env for token)
-from dotenv import load_dotenv
-load_dotenv()
+from dotenv import load_dotenv # type: ignore
+load_dotenv() 
 
 # Get the bot token from the environment or replace with a hardcoded token
 BOT_TOKEN = os.getenv("BOT_TOKEN")
