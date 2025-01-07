@@ -1,5 +1,4 @@
-start a virtaul using
-python
+start a virtaul using python
 ```
 create a .env file with 
 ```
@@ -18,12 +17,12 @@ after pulling the default model run the bot by running
 ```
 run.py
 ```
-To change the mode
-```py open chat.py and change 
+To change the model open chat.py and change 
+``` 
  for part in chat('orca-mini:3b', messages=messages, stream=True):
 ```
 To
-```py
+```
 for part in chat('your-modelname', messages=messages, stream=True):
 ```
 To also change the ollama requst url change 
@@ -31,4 +30,6 @@ To also change the ollama requst url change
 url = "http://192.168.12.220:11434/api/chat"
 ``` 
 in chat.py to 
-```url = "http://you-chat-ip:your-chat-port/api/chat"```
+```
+url = "http://you-chat-ip:your-chat-port/api/chat"
+```
