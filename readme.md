@@ -29,4 +29,5 @@ for part in chat('your-modelname', messages=messages, stream=True):
 To also change the ollama requst change 
 ```
 url = "http://192.168.12.220:11434/api/chat"
-``` in chat.py to ```url = "http://you-chat-ip:yourchatport/api/chat"```
+``` in chat.py to 
+```url = "http://you-chat-ip:yourchatport/api/chat"```
