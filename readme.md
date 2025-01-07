@@ -1,25 +1,33 @@
-start a virtaul using python
-```
-create a .env file with 
-```
-BOT_TOKEN=your-token-here
-TESTING_GUILD_ID=1326191744022482954
-```
-install the requirements.txt
-```py
-pip install -r requirements.txt
-```
-then pull the default model
-```
-ollama pull orca-mini:3b
-```
-after pulling the default model run the bot by running 
-```
-run.py
-```
-To change the model open chat.py and change 
-``` 
- for part in chat('orca-mini:3b', messages=messages, stream=True):
+# Getting Started
+
+1. Create a virtual environment using Python
+
+2. Create a `.env` file with the following content:
+    ```
+    BOT_TOKEN=your-token-here
+    TESTING_GUILD_ID=1326191744022482954
+    ```
+
+3. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. Pull the default model:
+    ```bash
+    ollama pull orca-mini:3b
+    ```
+
+5. Start the bot:
+    ```bash
+    python run.py
+    ```
+
+## Changing the Model
+
+To use a different model, modify `chat.py` and update the following line:
+```python
+for part in chat('orca-mini:3b', messages=messages, stream=True):
 ```
 To
 ```
