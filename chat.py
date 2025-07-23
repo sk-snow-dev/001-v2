@@ -7,7 +7,7 @@ def chatbot(user_input):
     """
     # Define the API URL and model name
     url = "http://192.168.12.220:11434/api/chat"  # Ensure the correct endpoint is used
-    model = "orca-mini:3b"  # Specify the model to use
+    model = "dolphin-phi:latest"  # Specify the model to use
 
     # Prepare the payload
     payload = {
