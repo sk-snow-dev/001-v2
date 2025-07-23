@@ -27,7 +27,7 @@
 
 To use a different model, modify `chat.py` and update the following line:
 ```python
-for part in chat('orca-mini:3b', messages=messages, stream=True):
+ model = "orca-mini:3b"    
 ```
 To
 ```
